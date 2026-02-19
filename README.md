@@ -61,7 +61,7 @@ npx @anthropic-ai/mcp-inspector@latest https://leguy-mcp-cloudflare.<tu-cuenta>.
 
 ## Repositorios relacionados
 
-- [leguy-mcp](https://github.com/steffanochilotte/leguy-mcp) - Version Python para uso local via `uvx leguy-mcp`
+- [leguy-mcp](https://github.com/schilotte/leguy-mcp) - Version Python para uso local via `uvx leguy-mcp`
 
 ## Fuente de datos
 

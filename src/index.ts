@@ -198,7 +198,7 @@ export default {
 
 	<h2>Links</h2>
 	<ul>
-		<li><a href="https://github.com/steffanochilotte/leguy-mcp-cloudflare">GitHub Repository</a></li>
+		<li><a href="https://github.com/schilotte/leguy-mcp-cloudflare">GitHub Repository</a></li>
 		<li><a href="https://www.impo.com.uy">IMPO - Centro de Informacion Oficial</a></li>
 	</ul>
 </body>

@@ -8,7 +8,7 @@
 	"keywords": ["mcp", "cloudflare", "workers", "uruguay", "legislation", "impo"],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/steffanochilotte/leguy-mcp-cloudflare"
+		"url": "https://github.com/schilotte/leguy-mcp-cloudflare"
 	},
 	"scripts": {
 		"deploy": "wrangler deploy",
