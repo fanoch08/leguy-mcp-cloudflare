@@ -1,24 +1,34 @@
 # leguy-mcp-cloudflare
 
-MCP Server para consultar legislacion uruguaya desde IMPO (Centro de Informacion Oficial), desplegado en Cloudflare Workers.
+MCP Server to query Uruguayan legislation from IMPO (Centro de Informacion Oficial), deployed on Cloudflare Workers.
 
 ## Endpoint
 
 ```
-https://leguy-mcp-cloudflare.<tu-cuenta>.workers.dev/mcp
+https://leguy-mcp-cloudflare.<your-account>.workers.dev/mcp
 ```
 
-## Tools disponibles
+## Available tools
 
-| Tool | Descripcion |
+| Tool | Description |
 |------|-------------|
-| `leguy_get_norma` | Obtiene metadata y resumen de una norma |
-| `leguy_get_norma_completa` | Obtiene el texto completo de una norma |
-| `leguy_get_articulo` | Obtiene un articulo especifico |
-| `leguy_get_constitucion` | Obtiene resumen de la Constitucion |
-| `leguy_search_articulos` | Busca texto en articulos de una norma |
+| `leguy_get_norma` | Retrieves metadata and summary of a legal norm |
+| `leguy_get_norma_completa` | Retrieves the full text of a legal norm |
+| `leguy_get_articulo` | Retrieves a specific article |
+| `leguy_get_constitucion` | Retrieves a summary of the Constitution |
+| `leguy_search_articulos` | Searches text within articles of a norm |
 
-## Tipos de norma soportados
+## Agent workflows
+
+Natural-language SOPs were added in `agents/` to guide MCP workflows:
+
+- Query norm summary
+- Query full norm
+- Query specific article
+- Query Constitution summary
+- Search text in articles
+
+## Supported norm types
 
 - `ley`
 - `decreto`
@@ -27,22 +37,22 @@ https://leguy-mcp-cloudflare.<tu-cuenta>.workers.dev/mcp
 - `ordenanza`
 - `acordada`
 
-## Uso con Claude Code
+## Usage with Claude Code
 
 ```bash
-claude mcp add leguy --transport sse --url https://leguy-mcp-cloudflare.<tu-cuenta>.workers.dev/mcp
+claude mcp add leguy --transport sse --url https://leguy-mcp-cloudflare.<your-account>.workers.dev/mcp
 ```
 
-## Desarrollo local
+## Local development
 
 ```bash
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Ejecutar en modo desarrollo
+# Run in development mode
 npm run dev
 
-# El servidor estara disponible en http://localhost:8787/mcp
+# Server will be available at http://localhost:8787/mcp
 ```
 
 ## Deploy
@@ -51,22 +61,22 @@ npm run dev
 npm run deploy
 ```
 
-## Verificacion
+## Verification
 
-Probar con MCP Inspector:
+Test with MCP Inspector:
 
 ```bash
-npx @anthropic-ai/mcp-inspector@latest https://leguy-mcp-cloudflare.<tu-cuenta>.workers.dev/mcp
+npx @anthropic-ai/mcp-inspector@latest https://leguy-mcp-cloudflare.<your-account>.workers.dev/mcp
 ```
 
-## Repositorios relacionados
+## Related repositories
 
-- [leguy-mcp](https://github.com/schilotte/leguy-mcp) - Version Python para uso local via `uvx leguy-mcp`
+- [leguy-mcp](https://github.com/schilotte/leguy-mcp) - Python version for local usage via `uvx leguy-mcp`
 
-## Fuente de datos
+## Data source
 
-Los datos provienen de [IMPO - Centro de Informacion Oficial](https://www.impo.com.uy), el repositorio oficial de legislacion uruguaya.
+Data comes from [IMPO - Centro de Informacion Oficial](https://www.impo.com.uy), the official Uruguayan legislation repository.
 
-## Licencia
+## License
 
 MIT
